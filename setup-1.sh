@@ -14,6 +14,8 @@ pip3 install flask-shell
 pip3 install flask-login
 pip3 install flask-wtf
 pip3 install email-validator
+pip3 install import Mail
+
 
 # No need to do this because I have dotenv file
 # export FLASK_APP=hello_world.py
@@ -84,7 +86,7 @@ Test that manually
 (venv)$ python3
 from app import db
 from app.models import User
-u = User(username='paulj2', email='pj@freefaculty.org')
+u = User(username='pauljohn32', email='pauljohn32@freefaculty.org', super=True)
 db.session.add(u)
 db.session.commit()
 users = User.query.all()
