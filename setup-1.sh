@@ -12,6 +12,8 @@ pip3 install flask-sqlalchemy
 pip3 install flask-migrate
 pip3 install flask-shell
 pip3 install flask-login
+pip3 install flask-wtf
+pip3 install email-validator
 
 # No need to do this because I have dotenv file
 # export FLASK_APP=hello_world.py
@@ -37,6 +39,44 @@ Take files as they are, then initialize database with migration
 (venv)$ flask db init
 (venv)$ flask db migrate -m "users table"
 (venv)$ flask db upgrade
+
+
+##
+# (venv) pauljohn@dellap-20:~/GIT/flask/pj_flask/base$ flask db init
+# OS environment development
+# OS environment development: development
+# fname app.db
+# basedir /home/pauljohn/GIT/flask/pj_flask/base
+#   Creating directory /home/pauljohn/GIT/flask/pj_flask/base/migrations ...  done
+#   Creating directory /home/pauljohn/GIT/flask/pj_flask/base/migrations/versions
+#   ...  done
+#   Generating /home/pauljohn/GIT/flask/pj_flask/base/migrations/script.py.mako ...  done
+#   Generating /home/pauljohn/GIT/flask/pj_flask/base/migrations/alembic.ini ...  done
+#   Generating /home/pauljohn/GIT/flask/pj_flask/base/migrations/README ...  done
+#   Generating /home/pauljohn/GIT/flask/pj_flask/base/migrations/env.py ...  done
+#   Please edit configuration/connection/logging settings in
+#   '/home/pauljohn/GIT/flask/pj_flask/base/migrations/alembic.ini' before
+#   proceeding.
+# (venv) pauljohn@dellap-20:~/GIT/flask/pj_flask/base$ flask db migrate -m "users table"
+# OS environment development
+# OS environment development: development
+# fname app.db
+# basedir /home/pauljohn/GIT/flask/pj_flask/base
+# INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+# INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+# INFO  [alembic.autogenerate.compare] Detected added table 'user'
+# INFO  [alembic.autogenerate.compare] Detected added index 'ix_user_email' on '['email']'
+# INFO  [alembic.autogenerate.compare] Detected added index 'ix_user_username' on '['username']'
+#   Generating /home/pauljohn/GIT/flask/pj_flask/base/migrations/versions/d3c75d580f
+#   bd_users_table.py ...  done
+# (venv) pauljohn@dellap-20:~/GIT/flask/pj_flask/base$ flask db upgrade
+# OS environment development
+# OS environment development: development
+# fname app.db
+# basedir /home/pauljohn/GIT/flask/pj_flask/base
+# INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+# INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+# INFO  [alembic.runtime.migration] Running upgrade  -> d3c75d580fbd, users table
 
 
 Test that manually
