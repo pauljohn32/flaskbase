@@ -25,7 +25,7 @@ def before_request():
 @login_required
 def index():
     ## return "hello world"
-    return render_template('index.html', title='Home'
+    return render_template('main/index.html', title='Home'
     )
 
 
