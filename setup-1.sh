@@ -14,7 +14,7 @@ pip3 install flask-shell
 pip3 install flask-login
 pip3 install flask-wtf
 pip3 install email-validator
-pip3 install import Mail
+pip3 install import flask_mail
 
 
 # No need to do this because I have dotenv file
