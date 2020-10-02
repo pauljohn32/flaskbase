@@ -24,9 +24,9 @@ def before_request():
 @main_bp.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    return "hello world"
-    #return render_template('index.html', title=_('Home')
-    #   )
+    ## return "hello world"
+    return render_template('index.html', title='Home'
+    )
 
 
 # @bp.route('/explore')
