@@ -15,6 +15,7 @@ pip3 install flask-login
 pip3 install flask-wtf
 pip3 install email-validator
 pip3 install import flask_mail
+pip3 install PyJWT
 
 
 # No need to do this because I have dotenv file
@@ -100,3 +101,9 @@ Simpler convenience methd using flask-shell package
 >>> db.session.commit()
 >>> users = User.query.all()
 >>> [print(u.id, u.username) for u in users]
+
+
+
+With bootstrap
+
+pip3 install import flask_bootstrap
