@@ -82,7 +82,8 @@ Take files as they are, then initialize database with migration
 # INFO  [alembic.runtime.migration] Running upgrade  -> d3c75d580fbd, users table
 
 
-Test that manually
+Test that manually. This DID work, but after revision of the app, it
+does not anymore.  Need to find out why
 
 (venv)$ python3
 from app import db
@@ -107,3 +108,23 @@ Simpler convenience methd using flask-shell package
 With bootstrap
 
 pip3 install import flask_bootstrap
+
+
+
+Testing outgoing mail, flask shell
+
+
+export MAIL_SERVER=smtp.dreamhost.com
+export MAIL_USE_TLS=0
+export MAIL_PORT=587
+export MAIL_USERNAME=pauljohn32@freefaculty.org
+export MAIL_PASSWORD='LoverBoy32!@'
+
+
+
+from flask_mail import Message
+from app import mail
+msg = Message('test subject', sender="pauljohn32@freefaculty.org", recipients=['pauljohn@ku.edu'])
+msg.body = "asdf asdfka sdfjlas jaksdlf jasdklf"
+msg.html = "<h1>HTML inside here</h1>"
+mail.send(msg)

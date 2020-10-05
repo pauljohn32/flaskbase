@@ -15,7 +15,7 @@ class Config(object):
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['your-email@example.com']
+    ADMINS = ["pjohnson@teracrunch.com"]
     
  
 class ProdConfig(Config):
@@ -27,8 +27,8 @@ class ProdConfig(Config):
 ##        'sqlite:///' + os.path.join(basedir, 'app.db')
 
 class DevConfig(Config):
-    DEBUG = True
-    TESTING = True
+    #DEBUG = True
+    #TESTING = True
     # fname = os.environ.get('DEV_DATABASE_URL')
     # print(fname)
     fname = 'app.db'

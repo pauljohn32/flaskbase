@@ -2,6 +2,7 @@ from flask import render_template, redirect, url_for, flash, request
 from werkzeug.urls import url_parse
 from flask_login import login_user, logout_user, current_user
 # from flask_babel import _
+from flask import current_app as myapp
 from app import db
 from app.auth import auth_bp
 from app.auth.forms import LoginForm, RegistrationForm, \
@@ -55,6 +56,8 @@ def reset_password_request():
     if current_user.is_authenticated:
         return redirect(url_for('main.index'))
     form = ResetPasswordRequestForm()
+    # myapp.config["DEBUG"] = True
+    print(myapp.config)
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
