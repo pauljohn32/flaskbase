@@ -1,5 +1,8 @@
 {% extends 'bootstrap/base.html' %}
 
+<link rel="shortcut icon" href="{{ url_for('static', filename='dist/img/favicon.png') }}" type="image/x-icon"/>
+
+
 {% block title %}
     {% if title %}{{ title }} - Base App{% else %}{{ 'Welcome to base app' }}{% endif %}
 {% endblock %}
