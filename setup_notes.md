@@ -118,7 +118,7 @@ export MAIL_SERVER=smtp.dreamhost.com
 export MAIL_USE_TLS=0
 export MAIL_PORT=587
 export MAIL_USERNAME=pauljohn32@freefaculty.org
-export MAIL_PASSWORD='LoverBoy32!@'
+export MAIL_PASSWORD='xxxx!@'
 
 
 
